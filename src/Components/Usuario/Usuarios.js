@@ -22,7 +22,7 @@ const Usuarios = () => {
     <Fragment>
       <div className="container">
         <div className="row">
-          <div className="col-md-7">
+          <div className="col-md-8">
             <UsuarioFilter />
             {filtered !== null
               ? filtered.map(usuario => (
@@ -36,7 +36,7 @@ const Usuarios = () => {
                   </div>
                 ))}
           </div>
-          <div className="col-md-5">
+          <div className="col-md-4">
             {current ? <UpdateUsuarioForm /> : <AddUsuarioForm />}
           </div>
         </div>
