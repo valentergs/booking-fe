@@ -12,14 +12,14 @@ import Login from "./Components/Auth/Login";
 import Alerts from "./Components/Layout/Alerts.js";
 
 // Contexts
-import CrmplusState from "./Context/crmplus/crmplusState";
+import VAState from "./Context/vacaamarela/vaState";
 import AuthState from "./Context/auth/AuthState";
 import AlertState from "./Context/alert/AlertState";
 
 const App = () => {
   return (
     <AuthState>
-      <CrmplusState>
+      <VAState>
         <AlertState>
           <Router>
             <Fragment>
@@ -27,17 +27,17 @@ const App = () => {
               <div className="container">
                 <Alerts />
                 <Switch>
+                  <Route exact path="/" component={Login} />
                   <Route exact path="/dashboard" component={DashBoard} />
                   <Route exact path="/usuarios" component={Usuarios} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/register" component={Register} />
-                  <Route exact path="/" component={Login} />
                 </Switch>
               </div>
             </Fragment>
           </Router>
         </AlertState>
-      </CrmplusState>
+      </VAState>
     </AuthState>
   );
 };

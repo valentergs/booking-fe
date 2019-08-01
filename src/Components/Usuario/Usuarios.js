@@ -3,11 +3,11 @@ import UsuarioItem from "./UsuarioItem";
 import UsuarioFilter from "./UsuariosFilter";
 import AddUsuarioForm from "./AddUsuarioForm";
 import UpdateUsuarioForm from "./UpdateUsuarioForm";
-import CRMplusContext from "../../Context/crmplus/crmplusContext";
+import VAContext from "../../Context/vacaamarela/vaContext";
 
 const Usuarios = () => {
-  const crmplusContext = useContext(CRMplusContext);
-  const { usuarioState, getUsuarios, filtered, current } = crmplusContext;
+  const vaContext = useContext(VAContext);
+  const { usuarioState, getUsuarios, filtered, current } = vaContext;
 
   useEffect(() => {
     getUsuarios();

@@ -1,9 +1,9 @@
 import React, { useEffect, useContext, useState } from "react";
-import CRMplusContext from "../../Context/crmplus/crmplusContext";
+import VAContext from "../../Context/vacaamarela/vaContext";
 
 const AddUsuarioForm = () => {
-  const crmplusContext = useContext(CRMplusContext);
-  const { addUsuario, current, clearCurrent } = crmplusContext;
+  const vaContext = useContext(VAContext);
+  const { addUsuario, current, clearCurrent } = vaContext;
 
   useEffect(() => {
     setUsuario({
@@ -16,7 +16,7 @@ const AddUsuarioForm = () => {
       ativo: false,
       departamento: ""
     });
-  }, [crmplusContext, current]);
+  }, [vaContext, current]);
 
   const [usuario, setUsuario] = useState({
     nome: "",

@@ -1,10 +1,10 @@
 import React, { useContext, useRef, useEffect } from "react";
-import CRMplusContext from "../../Context/crmplus/crmplusContext";
+import VAContext from "../../Context/vacaamarela/vaContext";
 
 const UsuariosFilter = () => {
-  const crmplusContext = useContext(CRMplusContext);
+  const vaContext = useContext(VAContext);
   const text = useRef("");
-  const { filterUsuario, clearFilter, filtered } = crmplusContext;
+  const { filterUsuario, clearFilter, filtered } = vaContext;
 
   const onChange = e => {
     if (text.current.value !== "") {

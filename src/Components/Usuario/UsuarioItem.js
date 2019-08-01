@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import CRMplusContext from "../../Context/crmplus/crmplusContext";
+import VAContext from "../../Context/vacaamarela/vaContext";
 
 const UsuarioItem = ({ usuario }) => {
-  const crmplusContext = useContext(CRMplusContext);
-  const { delUsuario, setCurrent } = crmplusContext;
+  const vaContext = useContext(VAContext);
+  const { delUsuario, setCurrent } = vaContext;
 
   const {
     usuario_id,
@@ -20,6 +20,10 @@ const UsuarioItem = ({ usuario }) => {
     delUsuario(usuario_id);
   };
 
+  const verMais = () => {
+    console.log("Editei!");
+  };
+
   const editarUsuario = () => {
     console.log("Editei!");
   };
@@ -27,7 +31,7 @@ const UsuarioItem = ({ usuario }) => {
   return (
     <div className="card shadow-sm rounded bg-light my-3 p-2">
       <div className="container">
-        <div className="row" onClick={editarUsuario}>
+        <div className="row" onClick={verMais}>
           <div className="col-md-5">
             <h5 className="text-primary text-left">
               {nome}
@@ -41,28 +45,31 @@ const UsuarioItem = ({ usuario }) => {
           <div className="col-md-3 text-center">
             {superuser === true ? (
               <i
-                style={{ color: "black", margin: "5px" }}
+                style={{ color: "black", margin: "3px" }}
                 className="fas fa-users"
               />
             ) : (
               <i
-                style={{ color: "#C7C6C4", margin: "5px" }}
+                style={{ color: "#C7C6C4", margin: "3px" }}
                 className="fas fa-users"
               />
             )}
             {ativo === true ? (
               <i
-                style={{ color: "black", margin: "5px" }}
+                style={{ color: "black", margin: "3px" }}
                 className="fas fa-power-off"
               />
             ) : (
               <i
-                style={{ color: "#C7C6C4", margin: "5px" }}
+                style={{ color: "#C7C6C4", margin: "3px" }}
                 className="fas fa-power-off"
               />
             )}
             <button>
               <i className="far fa-trash-alt" onClick={onDelete} />
+            </button>
+            <button>
+              <i className="fas fa-pencil-alt" onClick={editarUsuario} />
             </button>
           </div>
         </div>

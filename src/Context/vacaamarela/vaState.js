@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import axios from "axios";
-import CrmplusContext from "./crmplusContext";
-import CrmplusReducer from "./crmplusReducer";
+import VAContext from "./vaContext";
+import VAReducer from "./vaReducer";
 import {
   ADD_USUARIO,
   GET_USUARIOS,
@@ -13,16 +13,15 @@ import {
   CLEAR_CURRENT
 } from "../types";
 
-const CrmplusState = props => {
+const VAState = props => {
   const initialState = {
     usuarioState: [],
     current: null,
     filtered: null,
-    addUsuarioBtn: true,
-    toggleAddUsuarioForm: true
+    addUsuarioBtn: true
   };
 
-  const [state, dispatch] = useReducer(CrmplusReducer, initialState);
+  const [state, dispatch] = useReducer(VAReducer, initialState);
 
   // Get Usuarios
   const getUsuarios = async () => {
@@ -81,13 +80,13 @@ const CrmplusState = props => {
   };
 
   return (
-    <CrmplusContext.Provider
+    <VAContext.Provider
       value={{
         usuarioState: state.usuarioState,
         filtered: state.filtered,
         current: state.current,
-        addUsuarioBtn: state.addUsuarioBtn,
-        toggleAddUsuarioForm: state.toggleAddUsuarioForm,
+        // addUsuarioBtn: state.addUsuarioBtn,
+        // toggleAddUsuarioForm: state.toggleAddUsuarioForm,
         delUsuario,
         addUsuario,
         getUsuarios,
@@ -99,8 +98,8 @@ const CrmplusState = props => {
       }}
     >
       {props.children}
-    </CrmplusContext.Provider>
+    </VAContext.Provider>
   );
 };
 
-export default CrmplusState;
+export default VAState;

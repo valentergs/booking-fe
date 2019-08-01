@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import CRMplusContext from "../../Context/crmplus/crmplusContext";
+import VAContext from "../../Context/vacaamarela/vaContext";
 
 const DashBoard = () => {
-  const crmplusContext = useContext(CRMplusContext);
-  const { usuarioState, getUsuarios } = crmplusContext;
+  const vaContext = useContext(VAContext);
+  const { usuarioState, getUsuarios } = vaContext;
 
   useEffect(() => {
     getUsuarios();

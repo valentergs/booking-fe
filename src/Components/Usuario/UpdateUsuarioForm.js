@@ -1,13 +1,13 @@
 import React, { useEffect, useContext, useState } from "react";
-import CRMplusContext from "../../Context/crmplus/crmplusContext";
+import VAContext from "../../Context/vacaamarela/vaContext";
 
 const UpdateUsuarioForm = () => {
-  const crmplusContext = useContext(CRMplusContext);
-  const { updateUsuario, current, clearCurrent } = crmplusContext;
+  const vaContext = useContext(VAContext);
+  const { updateUsuario, current, clearCurrent } = vaContext;
 
   useEffect(() => {
     setUsuario(current);
-  }, [crmplusContext, current]);
+  }, [vaContext, current]);
 
   const [usuario, setUsuario] = useState({
     nome: "",
