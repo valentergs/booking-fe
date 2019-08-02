@@ -9,35 +9,47 @@ const AddUsuarioForm = () => {
     setUsuario({
       nome: "",
       sobrenome: "",
-      senha: "",
       email: "",
+      senha: "",
+      cpf: "",
+      endereco: "",
+      cidade: "",
+      estado: "",
+      cep: "",
       celular: "",
       superuser: false,
-      ativo: false,
-      departamento: ""
+      ativo: false
     });
   }, [vaContext, current]);
 
   const [usuario, setUsuario] = useState({
     nome: "",
     sobrenome: "",
-    senha: "",
     email: "",
+    senha: "",
+    cpf: "",
+    endereco: "",
+    cidade: "",
+    estado: "",
+    cep: "",
     celular: "",
     superuser: false,
-    ativo: false,
-    departamento: ""
+    ativo: false
   });
 
   const {
     nome,
     sobrenome,
-    senha,
     email,
+    senha,
+    cpf,
+    endereco,
+    cidade,
+    estado,
+    cep,
     celular,
     superuser,
-    ativo,
-    departamento
+    ativo
   } = usuario;
 
   const onChange = e => {
@@ -91,7 +103,6 @@ const AddUsuarioForm = () => {
             name="email"
             value={email}
             onChange={onChange}
-            required
           />
         </div>
         <div className="form-group">
@@ -102,12 +113,57 @@ const AddUsuarioForm = () => {
             name="senha"
             value={senha}
             onChange={onChange}
-            required
-            minLength="8"
           />
-          <small id="emailHelp" className="form-text text-muted">
-            Sua senha será encriptada em nosso Banco de Dados.
-          </small>
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="CPF"
+            name="cpf"
+            value={cpf}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Endereço"
+            name="endereco"
+            value={endereco}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Cidade"
+            name="cidade"
+            value={cidade}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Estado"
+            name="estado"
+            value={estado}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="CEP"
+            name="cep"
+            value={cep}
+            onChange={onChange}
+          />
         </div>
         <div className="form-group">
           <input
@@ -118,21 +174,6 @@ const AddUsuarioForm = () => {
             value={celular}
             onChange={onChange}
           />
-        </div>
-        <div className="form-group">
-          <select
-            type="text"
-            className="form-control"
-            placeholder="Departamento"
-            name="departamento"
-            value={departamento}
-            onChange={onChange}
-          >
-            <option value="-----">-----</option> />
-            <option value="Vendas">Vendas</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Financeiro">Financeiro</option>
-          </select>
         </div>
         <div className="form-group">
           <input

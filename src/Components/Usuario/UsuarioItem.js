@@ -24,16 +24,8 @@ const UsuarioItem = ({ usuario }) => {
     delUsuario(usuario_id);
   };
 
-  const verMais = () => {
-    console.log("Editei!");
-  };
-
   const [isVerMaisOn, setVerMais] = useState(false);
   const toggleVerMais = () => setVerMais(!isVerMaisOn);
-
-  const editarUsuario = () => {
-    console.log("Editei!");
-  };
 
   return (
     <div className="card shadow-sm rounded bg-light my-3 p-2">
@@ -76,15 +68,18 @@ const UsuarioItem = ({ usuario }) => {
               <i className="far fa-trash-alt" onClick={onDelete} />
             </button>
             <button>
-              <i className="fas fa-pencil-alt" onClick={editarUsuario} />
+              <i
+                className="fas fa-pencil-alt"
+                onClick={() => setCurrent(usuario)}
+              />
             </button>
             {isVerMaisOn === false ? (
               <button>
-                <i className="fas fa-chevron-down" onClick={toggleVerMais} />
+                <i className="fas fa-plus" onClick={toggleVerMais} />
               </button>
             ) : (
               <button>
-                <i className="fas fa-chevron-up" onClick={toggleVerMais} />
+                <i className="fas fa-minus" onClick={toggleVerMais} />
               </button>
             )}
           </div>

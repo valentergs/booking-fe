@@ -34,7 +34,7 @@ const VAState = props => {
 
   // Delete Usuario
   const delUsuario = usuario_id => {
-    axios.delete(`http://localhost:8080/usuario/delete/${usuario_id}`);
+    axios.delete(`http://localhost:8080/usuario/apagar/${usuario_id}`);
     dispatch({
       type: DEL_USUARIO,
       payload: usuario_id
@@ -43,7 +43,10 @@ const VAState = props => {
 
   // Add Usuario
   const addUsuario = async usuario => {
-    const res = await axios.post("http://localhost:8080/usuario/add", usuario);
+    const res = await axios.post(
+      "http://localhost:8080/usuario/inserir",
+      usuario
+    );
     dispatch({
       type: ADD_USUARIO,
       payload: res.data
@@ -63,7 +66,7 @@ const VAState = props => {
   // Update usuário
   const updateUsuario = async usuario => {
     const res = await axios.put(
-      `http://localhost:8080/usuario/edit/${usuario.usuario_id}`,
+      `http://localhost:8080/usuario/editar/${usuario.usuario_id}`,
       usuario
     );
     dispatch({ type: UPDATE_USUARIO, payload: res.data });

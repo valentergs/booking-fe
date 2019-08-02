@@ -12,22 +12,29 @@ const UpdateUsuarioForm = () => {
   const [usuario, setUsuario] = useState({
     nome: "",
     sobrenome: "",
-    senha: "",
     email: "",
+    cpf: "",
+    endereco: "",
+    cidade: "",
+    estado: "",
+    cep: "",
     celular: "",
     superuser: false,
-    ativo: false,
-    departamento: ""
+    ativo: false
   });
 
   const {
     nome,
     sobrenome,
     email,
+    cpf,
+    endereco,
+    cidade,
+    estado,
+    cep,
     celular,
     superuser,
-    ativo,
-    departamento
+    ativo
   } = usuario;
 
   const onChange = e => {
@@ -85,26 +92,61 @@ const UpdateUsuarioForm = () => {
           <input
             type="text"
             className="form-control"
+            placeholder="CPF"
+            name="cpf"
+            value={cpf}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Endereço"
+            name="endereco"
+            value={endereco}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Cidade"
+            name="cidade"
+            value={cidade}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Estado"
+            name="estado"
+            value={estado}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="CEP"
+            name="cep"
+            value={cep}
+            onChange={onChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
             placeholder="Celular"
             name="celular"
             value={celular}
             onChange={onChange}
           />
-        </div>
-        <div className="form-group">
-          <select
-            type="text"
-            className="form-control"
-            placeholder="Departamento"
-            name="departamento"
-            value={departamento}
-            onChange={onChange}
-          >
-            <option value="-----">-----</option> />
-            <option value="Vendas">Vendas</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Financeiro">Financeiro</option>
-          </select>
         </div>
         <div className="form-group">
           <input
