@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import VAContext from "../../Context/vacaamarela/vaContext";
 
 const UsuarioItem = ({ usuario }) => {
@@ -10,10 +10,14 @@ const UsuarioItem = ({ usuario }) => {
     nome,
     sobrenome,
     email,
+    cpf,
+    cep,
+    endereco,
+    cidade,
+    estado,
     celular,
     superuser,
-    ativo,
-    departamento
+    ativo
   } = usuario;
 
   const onDelete = () => {
@@ -24,6 +28,9 @@ const UsuarioItem = ({ usuario }) => {
     console.log("Editei!");
   };
 
+  const [isToggledOn, setToggle] = useState(false);
+  const toggle = () => setToggle(!isToggledOn);
+
   const editarUsuario = () => {
     console.log("Editei!");
   };
@@ -31,7 +38,7 @@ const UsuarioItem = ({ usuario }) => {
   return (
     <div className="card shadow-sm rounded bg-light my-3 p-2">
       <div className="container">
-        <div className="row" onClick={verMais}>
+        <div className="row">
           <div className="col-md-5">
             <h5 className="text-primary text-left">
               {nome}
@@ -71,8 +78,34 @@ const UsuarioItem = ({ usuario }) => {
             <button>
               <i className="fas fa-pencil-alt" onClick={editarUsuario} />
             </button>
+            {isToggledOn === false ? (
+              <button>
+                <i className="fas fa-chevron-down" onClick={toggle} />
+              </button>
+            ) : (
+              <button>
+                <i className="fas fa-chevron-up" onClick={toggle} />
+              </button>
+            )}
           </div>
         </div>
+        {isToggledOn ? (
+          <div className="row" style={{ margin: "20px 15px 20px 15px" }}>
+            <div className="col-md-8">
+              <div className="row">{endereco}</div>
+              <div className="row">
+                {cidade}-{estado}
+              </div>
+              <div className="row">{cep}</div>
+            </div>
+            <div className="col-md-4">
+              <div className="row">CPF: {cpf}</div>
+              <div className="row">Celular: {celular}</div>
+            </div>
+          </div>
+        ) : (
+          <div />
+        )}
       </div>
     </div>
   );

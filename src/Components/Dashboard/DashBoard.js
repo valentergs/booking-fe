@@ -27,22 +27,6 @@ const DashBoard = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="card shadow rounded">
-              <div className="card-header">
-                <h3>Clientes</h3>
-              </div>
-              <div className="card-body">Numero de clientes: 0</div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card shadow rounded">
-              <div className="card-header">
-                <h3>Relatórios</h3>
-              </div>
-              <div className="card-body">Numero de relatórios: 0</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
