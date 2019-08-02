@@ -28,8 +28,8 @@ const UsuarioItem = ({ usuario }) => {
     console.log("Editei!");
   };
 
-  const [isToggledOn, setToggle] = useState(false);
-  const toggle = () => setToggle(!isToggledOn);
+  const [isVerMaisOn, setVerMais] = useState(false);
+  const toggleVerMais = () => setVerMais(!isVerMaisOn);
 
   const editarUsuario = () => {
     console.log("Editei!");
@@ -78,18 +78,18 @@ const UsuarioItem = ({ usuario }) => {
             <button>
               <i className="fas fa-pencil-alt" onClick={editarUsuario} />
             </button>
-            {isToggledOn === false ? (
+            {isVerMaisOn === false ? (
               <button>
-                <i className="fas fa-chevron-down" onClick={toggle} />
+                <i className="fas fa-chevron-down" onClick={toggleVerMais} />
               </button>
             ) : (
               <button>
-                <i className="fas fa-chevron-up" onClick={toggle} />
+                <i className="fas fa-chevron-up" onClick={toggleVerMais} />
               </button>
             )}
           </div>
         </div>
-        {isToggledOn ? (
+        {isVerMaisOn ? (
           <div className="row" style={{ margin: "20px 15px 20px 15px" }}>
             <div className="col-md-8">
               <div className="row">{endereco}</div>
