@@ -7,7 +7,7 @@ import DashBoard from "./Components/Dashboard/DashBoard";
 import Header from "./Components/Layout/Header";
 import Usuarios from "./Components/Usuario/Usuarios";
 import About from "./Components/Pages/About";
-import Register from "./Components/Auth/Register";
+import Register from "./Components/Auth/Cadastro";
 import Login from "./Components/Auth/Login";
 import Alerts from "./Components/Layout/Alerts.js";
 
