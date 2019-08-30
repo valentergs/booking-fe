@@ -129,6 +129,7 @@ const Cadastro = props => {
             name="cpf"
             value={cpf}
             onChange={onChange}
+            maxLength="11"
           />
         </div>
         <div className="form-group">
@@ -159,6 +160,7 @@ const Cadastro = props => {
             name="estado"
             value={estado}
             onChange={onChange}
+            maxLength="2"
           />
         </div>
         <div className="form-group">
@@ -169,6 +171,7 @@ const Cadastro = props => {
             name="cep"
             value={cep}
             onChange={onChange}
+            maxLength="8"
           />
         </div>
         <div className="form-group">
@@ -179,6 +182,7 @@ const Cadastro = props => {
             name="celular"
             value={celular}
             onChange={onChange}
+            maxLength="11"
           />
         </div>
 
