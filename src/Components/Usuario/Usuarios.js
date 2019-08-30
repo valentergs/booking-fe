@@ -15,7 +15,11 @@ const Usuarios = () => {
   }, []);
 
   if (usuarioState !== null && usuarioState.length === 0) {
-    return <h4>Please add a contact</h4>;
+    return (
+      <h4 style={{ margin: "20px" }}>
+        Não há usuários disponiveis no momento.
+      </h4>
+    );
   }
 
   return (

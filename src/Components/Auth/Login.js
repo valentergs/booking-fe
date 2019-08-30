@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import AuthContext from "../../Context/auth/authContext";
 
 const Login = props => {
@@ -8,15 +9,15 @@ const Login = props => {
     senha: ""
   });
 
-  const { login, isAuthenticated } = authContext;
+  const { login, token } = authContext;
 
   const { email, senha } = user;
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (token) {
       props.history.push("/dashboard");
     }
-  }, [isAuthenticated, props.history]);
+  }, [token, props.history]);
 
   const onChange = e => setUser({ ...user, [e.target.name]: e.target.value });
 
@@ -31,7 +32,7 @@ const Login = props => {
   return (
     <div className="form-container">
       <h1 style={{ padding: "30px" }}>
-        Account <span className="text-primary">Login</span>
+        <span className="text-primary">Login</span>
       </h1>
       <form onSubmit={onSubmit}>
         <div className="form-group">
@@ -77,6 +78,10 @@ const Login = props => {
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div> */}
       </form>
+      <div style={{ marginTop: "20px" }}>
+        Não tem cadastro?
+        <Link to="/register"> Clique Aqui</Link>
+      </div>
     </div>
   );
 };
