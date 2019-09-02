@@ -18,7 +18,8 @@ const AddUsuarioForm = () => {
       cep: "",
       celular: "",
       superuser: false,
-      ativo: false
+      ativo: false,
+      novo: true
     });
   }, [vaContext, current]);
 
@@ -34,7 +35,8 @@ const AddUsuarioForm = () => {
     cep: "",
     celular: "",
     superuser: false,
-    ativo: false
+    ativo: false,
+    novo: true
   });
 
   const {
@@ -49,7 +51,8 @@ const AddUsuarioForm = () => {
     cep,
     celular,
     superuser,
-    ativo
+    ativo,
+    novo
   } = usuario;
 
   const onChange = e => {
@@ -192,6 +195,15 @@ const AddUsuarioForm = () => {
             onChange={onChange}
           />
           <label style={{ marginLeft: "4px" }}>Ativo</label>
+
+          <input
+            style={{ marginLeft: "15px" }}
+            type="checkbox"
+            name="novo"
+            checked={novo}
+            onChange={onChange}
+          />
+          <label style={{ marginLeft: "4px" }}>Novo</label>
         </div>
         <div>
           <input

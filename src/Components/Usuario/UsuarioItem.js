@@ -17,7 +17,8 @@ const UsuarioItem = ({ usuario }) => {
     estado,
     celular,
     superuser,
-    ativo
+    ativo,
+    novo
   } = usuario;
 
   const onDelete = () => {
@@ -62,6 +63,17 @@ const UsuarioItem = ({ usuario }) => {
               <i
                 style={{ color: "#C7C6C4", margin: "3px" }}
                 className="fas fa-power-off"
+              />
+            )}
+            {novo === true ? (
+              <i
+                style={{ color: "black", margin: "3px" }}
+                className="fas fa-check"
+              />
+            ) : (
+              <i
+                style={{ color: "#C7C6C4", margin: "3px" }}
+                className="fas fa-check"
               />
             )}
             <button>

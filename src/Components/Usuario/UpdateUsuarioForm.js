@@ -20,7 +20,8 @@ const UpdateUsuarioForm = () => {
     cep: "",
     celular: "",
     superuser: false,
-    ativo: false
+    ativo: false,
+    novo: true
   });
 
   const {
@@ -34,7 +35,8 @@ const UpdateUsuarioForm = () => {
     cep,
     celular,
     superuser,
-    ativo
+    ativo,
+    novo
   } = usuario;
 
   const onChange = e => {
@@ -165,6 +167,15 @@ const UpdateUsuarioForm = () => {
             onChange={onChange}
           />
           <label style={{ marginLeft: "4px" }}>Ativo</label>
+
+          <input
+            style={{ marginLeft: "15px" }}
+            type="checkbox"
+            name="novo"
+            checked={novo}
+            onChange={onChange}
+          />
+          <label style={{ marginLeft: "4px" }}>Novo</label>
         </div>
         <div>
           <input

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
@@ -14,6 +14,7 @@ import Alerts from "./Components/Layout/Alerts.js";
 // Contexts
 import VAState from "./Context/vacaamarela/vaState";
 import AuthState from "./Context/auth/AuthState";
+import AuthContext from "./Context/auth/authContext";
 import AlertState from "./Context/alert/AlertState";
 
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
                   <Route exact path="/dashboard" component={DashBoard} />
                   <Route exact path="/usuarios" component={Usuarios} />
                   <Route exact path="/about" component={About} />
-                  <Route exact path="/register" component={Register} />
+                  <Route exact path="/cadastro" component={Register} />
                 </Switch>
               </div>
             </Fragment>
