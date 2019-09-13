@@ -32,7 +32,7 @@ const UsuarioItem = ({ usuario }) => {
     <div className="card shadow-sm rounded bg-light my-3 p-2">
       <div className="container">
         <div className="row">
-          <div className="col-md-5">
+          <div className="col-md-4">
             <h5 className="text-primary text-left">
               {nome}
               {"  "}
@@ -42,7 +42,7 @@ const UsuarioItem = ({ usuario }) => {
           <div className="col-md-4">
             <p>{email}</p>
           </div>
-          <div className="col-md-3 text-center">
+          <div className="col-md-4 text-center">
             {superuser === true ? (
               <i
                 style={{ color: "black", margin: "3px" }}
