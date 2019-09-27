@@ -22,3 +22,6 @@ export const CLEAR_ERRORS = "CLEAR_ERRORS";
 // Alerts
 export const SET_ALERT = "SET_ALERT";
 export const REMOVE_ALERT = "REMOVE_ALERT";
+
+// Reserva
+export const CHAMAR_RESERVA = "CHAMAR_RESERVA";
