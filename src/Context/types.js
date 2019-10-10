@@ -25,3 +25,6 @@ export const REMOVE_ALERT = "REMOVE_ALERT";
 
 // Reserva
 export const CHAMAR_RESERVA = "CHAMAR_RESERVA";
+export const SELECT_SPOT = "SELECT_SPOT";
+export const CLEAR_SELECT_SPOT = "CLEAR_SELECT_SPOT";
+export const CHAMAR_SPOT = "CHAMAR_SPOT";

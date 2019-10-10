@@ -25,6 +25,11 @@ const Reservas = () => {
             <PlantaUnidade />
           </div>
         </div>
+
+        <div className="row p-3">
+          <div className="col-md-12"></div>
+        </div>
+
         <div className="row p-3">
           <div className="col-md-12">
             {reservaState.map(reserva => (
@@ -37,6 +42,12 @@ const Reservas = () => {
       </div>
     </Fragment>
   );
+};
+
+const styles = {
+  spot: {
+    background: "red"
+  }
 };
 
 export default Reservas;

@@ -1,0 +1,30 @@
+<svg width="450" height="450" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="452" width="452" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(90 233.49999999999997,413.45312500000006) " id="svg_6">
+  <!-- Mesa Individuais -->
+   <rect id="svg_1" height="62" width="29" y="231.453125" x="219" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+   <rect id="svg_2" height="62" width="29" y="309.453125" x="219" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+   <rect id="svg_3" height="62" width="29" y="383.453125" x="219" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+   <rect id="svg_4" height="62" width="29" y="457.453125" x="219" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+   <rect id="svg_5" height="62" width="29" y="533.453125" x="219" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  </g>
+  <!-- Mesa Reunião Pequena -->
+  <rect id="svg_7" height="33" width="114" y="123.453125" x="316.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="svg_9" height="33" width="114" y="43.453125" x="316.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="svg_10" height="33" width="114" y="293.453125" x="316.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="svg_11" height="33" width="114" y="207.453125" x="316.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <!-- Mesa Reunião Grande -->
+  <rect id="svg_12" height="194" width="88" y="52.453125" x="93.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <!-- Poltrona -->
+  <rect id="svg_13" height="30" width="30" y="303.453125" x="53.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="svg_14" height="30" width="30" y="302.453125" x="107.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="svg_15" height="30" width="30" y="302.453125" x="165.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+ </g>
+</svg>
+
