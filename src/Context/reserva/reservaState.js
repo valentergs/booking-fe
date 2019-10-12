@@ -14,6 +14,18 @@ const ReservaState = props => {
     reservaState: [],
     spotState: [],
     selecionado: null
+    // selecionado: {
+    //   spot_id: 0,
+    //   unidade: 0,
+    //   tipo: "",
+    //   livre: true,
+    //   bloqueado: false,
+    //   height: "",
+    //   width: "",
+    //   y: "",
+    //   x: "",
+    //   transform: ""
+    // }
   };
 
   const [state, dispatch] = useReducer(ReservaReducer, initialState);

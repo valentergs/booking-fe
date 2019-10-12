@@ -3,16 +3,16 @@ import ReservaContext from "../../Context/reserva/reservaContext";
 
 const Spots = () => {
   const reservaCtx = useContext(ReservaContext);
-  const { spotState, chamarSpot } = reservaCtx;
+  const { spotState, chamarSpot, selectSpot } = reservaCtx;
 
   useEffect(() => {
     chamarSpot();
   }, []);
 
   return (
-    <div>
+    <div style={styles}>
       <svg width={450} height={450}>
-        <title>{"background"}</title>
+        <title>{"mesa de trabalho"}</title>
         <path
           fill="#e5e5e5"
           d="M-1-1h452v452H-1z"
@@ -20,9 +20,25 @@ const Spots = () => {
           strokeWidth={1.5}
         />
         {spotState.map(lugar =>
-          lugar.livre === true ? (
+          lugar.bloqueado === true ? (
             <rect
-              strokeWidth={0.5}
+              strokeWidth={0}
+              className="livre"
+              stroke="#000"
+              fill="#6E6E6E"
+              height={lugar.height}
+              width={lugar.width}
+              y={lugar.y}
+              x={lugar.x}
+              key={lugar.spot_id}
+              unidade={lugar.unidade}
+              transform={lugar.transform}
+              onClick={() => selectSpot(lugar)}
+              style={styles.mouseOff}
+            />
+          ) : lugar.livre === true ? (
+            <rect
+              strokeWidth={0}
               className="livre"
               stroke="#000"
               fill="#04B45F"
@@ -33,11 +49,13 @@ const Spots = () => {
               key={lugar.spot_id}
               unidade={lugar.unidade}
               transform={lugar.transform}
+              onClick={() => selectSpot(lugar)}
+              style={styles.mouseOff}
             />
           ) : (
             <rect
               className="ocupado"
-              strokeWidth={0.5}
+              strokeWidth={0}
               stroke="#000"
               fill="#FF0000"
               height={lugar.height}
@@ -47,6 +65,8 @@ const Spots = () => {
               key={lugar.spot_id}
               unidade={lugar.unidade}
               transform={lugar.transform}
+              onClick={() => selectSpot(lugar)}
+              style={styles.mouseOff}
             />
           )
         )}
@@ -55,40 +75,13 @@ const Spots = () => {
   );
 };
 
-export default Spots;
+const styles = {
+  mouseOver: {
+    opacity: "1"
+  },
+  mouseOff: {
+    opacity: "0.5"
+  }
+};
 
-//const lugares = [
-//   {
-//     spot_id: 1,
-//     unidade: "Agua Fria",
-//     tipo: "Mesa",
-//     livre: true,
-//     height: "52.999931",
-//     width: "24.999964",
-//     y: "45.226808",
-//     x: "416.25004",
-//     transform: null
-//   },
-//   {
-//     spot_id: 2,
-//     unidade: "Agua Fria",
-//     tipo: "Mesa",
-//     livre: false,
-//     height: "52.999931",
-//     width: "24.999964",
-//     y: "164.226647",
-//     x: "11.750578",
-//     transform: null
-//   },
-//   {
-//     spot_id: 3,
-//     unidade: "Imirim",
-//     tipo: "Mesa",
-//     livre: true,
-//     height: "52.999931",
-//     width: "24.999964",
-//     y: "401.976346",
-//     x: "182.500379",
-//     transform: "rotate(90 195.00036621093747,428.47631835937506)"
-//   }
-// ];
+export default Spots;
