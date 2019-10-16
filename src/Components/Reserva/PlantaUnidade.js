@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import SvgComponent from "../Spot/Spots";
 
 const PlantaUnidade = () => {
   return (
-    <div>
+    <Fragment>
       <SvgComponent />
-    </div>
+    </Fragment>
   );
 };
 

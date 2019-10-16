@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
@@ -15,7 +15,6 @@ import Alerts from "./Components/Layout/Alerts.js";
 // Contexts
 import VAState from "./Context/vacaamarela/vaState";
 import AuthState from "./Context/auth/AuthState";
-import AuthContext from "./Context/auth/authContext";
 import AlertState from "./Context/alert/AlertState";
 import ReservaState from "./Context/reserva/reservaState";
 

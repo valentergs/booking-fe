@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, Fragment } from "react";
 import ReservaContext from "../../Context/reserva/reservaContext";
 
 const Spots = () => {
@@ -10,15 +10,10 @@ const Spots = () => {
   }, []);
 
   return (
-    <div style={styles}>
-      <svg width={450} height={450}>
+    <Fragment>
+      <svg width={"100%"} height={"100%"} viewBox="0 0 500 500">
         <title>{"mesa de trabalho"}</title>
-        <path
-          fill="#e5e5e5"
-          d="M-1-1h452v452H-1z"
-          stroke="#000"
-          strokeWidth={1.5}
-        />
+        <path fill="#e5e5e5" d="M-1-1h452v452H-1z" stroke="" strokeWidth={0} />
         {spotState.map(lugar =>
           lugar.bloqueado === true ? (
             <rect
@@ -71,7 +66,7 @@ const Spots = () => {
           )
         )}
       </svg>
-    </div>
+    </Fragment>
   );
 };
 

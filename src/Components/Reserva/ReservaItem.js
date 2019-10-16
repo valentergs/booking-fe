@@ -1,16 +1,7 @@
 import React, { Fragment } from "react";
 
 const ReservaItem = ({ reserva }) => {
-  const {
-    reserva_id,
-    nome,
-    sobrenome,
-    unidade,
-    spot,
-    tipo,
-    hora_inicio,
-    hora_fim
-  } = reserva;
+  const { nome, sobrenome, unidade, tipo, hora_inicio } = reserva;
 
   return (
     <Fragment>
