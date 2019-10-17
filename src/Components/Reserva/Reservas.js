@@ -4,6 +4,8 @@ import ReservaContext from "../../Context/reserva/reservaContext";
 // import ReservaCriarForm from "./ReservaCriarForm";
 // import PlantaUnidade from "./PlantaUnidade";
 import SvgComponent from "../Spot/Spots";
+import DiasDisp from "./diasAbertos";
+import InputSlider from "./inputSlider";
 
 const Reservas = () => {
   const reservaCtx = useContext(ReservaContext);
@@ -20,6 +22,31 @@ const Reservas = () => {
 
   return (
     <Fragment>
+      <h1 style={{ paddingTop: "20px" }}>Reservas</h1>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4" id="sidebar">
+            <div className="card shadow-sm rounded bg-light my-3 p-2">
+              <div id="diasdisp">
+                <DiasDisp />
+              </div>
+              <div id="inputslider">
+                <InputSlider />
+              </div>
+              <div style={{ margin: "0 auto" }}>
+                <SvgComponent />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-8" id="mainpane">
+            <div className="card shadow-sm rounded bg-light my-3 p-2">
+              Main Pane
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container">
         <div className="row">
           <div className="col-md-4">
@@ -73,27 +100,6 @@ const Reservas = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="container">
-        <div className="row p-3">
-          <div className="col-md-12 p-3">Colocar formulário de filtro</div>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <ReservaCriarForm />
-          </div>
-        </div>
-
-        <div className="row p-3">
-          <div className="col-md-12">
-            {reservaState.map(reserva => (
-              <div key={reserva.reserva_id}>
-                <ReservaItem reserva={reserva} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
     </Fragment>
   );
 };

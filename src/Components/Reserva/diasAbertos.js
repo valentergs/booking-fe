@@ -1,3 +1,4 @@
+import React from "react";
 import { isWeekend, addDays, format } from "date-fns";
 import pt from "date-fns/locale/pt-BR";
 
@@ -42,15 +43,20 @@ dias.map(x => {
   }
 });
 
-//console.log(foo);
-console.log(diasAbertos);
-
-const ThirdComp = () => {
+const DiasDisp = () => {
   return (
     <div>
-      {diasAbertos.map(res => (
-        <h3 key={res}>{res}</h3>
-      ))}
+      <form className="da-form">
+        <select className="da-select">
+          {diasAbertos.map(res => (
+            <option key={res} className="da-option">
+              {res}
+            </option>
+          ))}
+        </select>
+      </form>
     </div>
   );
 };
+
+export default DiasDisp;
